@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to my portfolio!</title>
+  <script src="script/anime.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/content.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+</head>
+
+<body>
+  <div class="mainheading">
+
+    <header>
+      <h1 id="Sanskriti"><a href="index.html">My Portfolio</a></h1>
+    </header>
+
+    <nav>      
+      <a href="about.html" style=" font-size: 20px;">About</a>
+      <a href="#" style=" font-size: 20px;"><u>Projects</u></a>
+      <a href="certificates.html" style=" font-size: 20px;">Certificates</a>
+      <a href="contact.html" style=" font-size: 20px;">Contact</a>   
+    </nav>
+
+  </div>
+
+  <section class="body">
+
+    <div class="mainbody">
+
+      <article id="projects">
+
+        <h1 class="ml11">
+          <span class="text-wrapper">
+            <span class="letters">Look what i have done</span>
+          </span>
+        </h1> 
+
+        <table>
+          <tr>
+              <td><a target="_blank" href="https://pacific-plains-28119.herokuapp.com/"><img src="images\proj_10.jpg" class="img1"></a></td>
+            <td><h2 style="font-size: 25px;">Newsletter Signup</h2>
+              <p class="contentp1"  style="font-size: 20px;">
+                I have worked on this hands-on project while completing my fullstack web dev course ...<br>
+                It is a <b>Newsletter Signup webpage</b><br>
+                It mainly uses:<br>
+                HTML, CSS, Javascript, Nodejs, ejs,express<br>
+                Click <- to see website..
+              </p>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              <p><br></p>
+            </td>
+          </tr>
+
+          <tr>
+            <td><a target="_blank" href="https://sans712.github.io/simon-game/"><img src="images\proj_11.jpg" height="5" width="5" class="img2"></a></td>
+            <td><h2 style="font-size: 25px;">Simon Game</h2>
+              <p class="contentp2"   style="font-size: 20px;">
+                click <- to see more ...<br>
+                It is a <b>Web development project</b><br>
+                It mainly uses Javascript and Jquery along with html css</p>
+            </td>
+          </tr>
+            
+            <tr>
+            <td>
+              <p><br></p>
+            </td>
+          </tr>
+            
+           <tr>
+            <td><a target="_blank" href="https://sans712.github.io/drum-kit-/"><img src="images\proj_12.jpg" height="5" width="5" class="img2"></a></td>
+            <td><h2 style="font-size: 25px;">Drum kit</h2>
+              <p class="contentp2"   style="font-size: 20px;">
+                click <- to see more ...<br>
+                Press on<b> keys</b> to see the magic of javascript<br>
+                It mainly uses Javascript and Jquery </p>
+            </td>
+          </tr> 
+            
+            <tr>
+            <td>
+              <p><br></p>
+            </td>
+          </tr>
+            
+             
+           <tr>
+            <td><a target="_blank" href="https://sans712.github.io/tindog-website/"><img src="images\proj_13.jpg" height="5" width="5" class="img2"></a></td>
+            <td><h2 style="font-size: 25px;">Tindog Website</h2>
+              <p class="contentp2"   style="font-size: 20px;">
+                click <- to see more ...<br>
+                This is a replication of tinder website<br>
+                It mainly uses Css and bootstrap. </p>
+            </td>
+          </tr> 
+            
+        </table>
+
+      </article><br>
+
+    </div>
+
+  </section>
+
+    
+    
+  <script>
+    var textWrapper = document.querySelector('.ml11 .letters');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({loop: true})
+    .add({
+      targets: '.ml11 .letter',
+      rotateY: [-90, 0],
+      duration: 1300,
+      delay: (el, i) => 45 * i
+    }).add({
+      targets: '.ml11',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 1000
+    });
+
+  </script>
+
+<footer>&copy; Copyright Sanskriti 2020</footer>
+
+</body>
+</html>

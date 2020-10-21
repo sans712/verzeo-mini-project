@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to my portfolio!!!</title>
+  <script src="script/anime.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/content.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+</head>
+
+<body>
+  <div class="mainheading">
+
+    <header>
+      <h1 id="Sanskriti"><a href="index.html">My Portfolio</a></h1>
+    </header>
+
+    <nav>      
+      <a href="about.html" style=" font-size: 20px;">About</a>
+      <a href="project.html" style=" font-size: 20px;">Projects</a>
+      <a href="#" style=" font-size: 20px;"><u>Certificates</u></a>
+      <a href="contact.html" style=" font-size: 20px;">Contact</a>   
+    </nav>
+
+  </div>
+
+  <section class="body">
+
+    <div class="mainbody">
+
+      <article id="certificates">
+
+        <h1 class="ml12">
+          <span class="text-wrapper">
+            <span class="letters">What i have learnt..</span>
+          </span>
+        </h1>
+        
+        <table>
+          <tr>
+            <td><img src="images\1certi.jpg" class="certi1"></td>
+            <td><img src="images\2certi.jpg" class="certi2"></td>
+            <td><img src="images\7certi.jpg" class="certi3"></td>
+            <td><img src="images\8certi.jpg" class="certi4"></td>
+          </tr>
+
+          <tr>
+            <td><img src="images\3certi.jpg" class="certi5"></td>
+            <td><img src="images\4certi.jpg" class="certi6"></td>
+            <td><img src="images\5certi.jpg" class="certi7"></td>
+            <td><img src="images\6certi.jpg" class="certi8"></td>
+          </tr>
+        </table> 
+
+      </article>
+
+    </div>
+
+  </section><br><br>
+
+  <footer>&copy; Copyright Sanskriti 2020</footer>
+
+  <script>
+    var textWrapper = document.querySelector('.ml12 .letters');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+  
+    anime.timeline({loop: true})
+    .add({
+      targets: '.ml12 .letter',
+      rotateY: [-90, 0],
+      duration: 1300,
+      delay: (el, i) => 45 * i
+    }).add({
+      targets: '.ml12',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+       delay: 1000
+    });
+  </script>
+
+</body>
+</html>

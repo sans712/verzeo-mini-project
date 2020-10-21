@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Welcome to my portfolio!!!</title>
+  <script src="script/anime.min.js"></script>
+</head>
+
+<body>
+
+  <div class="hero-image">
+
+    <a href="about.html">
+      <img src="images\hero.jpg" class="hero-image">
+    </a>
+
+    <div class="hero-text">
+
+      <h1 class="ml6">
+        <span class="text-wrapper">
+          <span class="letters">Hey!</span>
+        </span>
+      </h1>   
+
+      <h1 class="ml5">
+        <span class="text-wrapper">
+          <span class="letters">Am Sanskriti!!</span>
+        </span>
+      </h1>
+
+      <h1 class="ml4">
+        <span class="text-wrapper">
+          <span class="letters"> Web Developer|Designer</span>
+        </span>
+      </h1>
+
+      <h1 class="ml3">
+        <span class="text-wrapper">
+          <span class="letters">Head over to main page from here...</span>
+        </span>
+      </h1>
+      
+    </div>
+
+  </div>
+
+  <script>
+    var textWrapper = document.querySelector('.ml6 .letters');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    anime.timeline({loop: true})
+    .add({
+      targets: '.ml6 .letter',
+      translateY: ["1.1em", 0],
+      translateZ: 0,
+      duration: 750,
+      delay: (el, i) => 50 * i
+    }).add({
+      targets: '.ml6',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 1000
+    });
+
+    var textWrapper = document.querySelector('.ml5 .letters');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    anime.timeline({loop: true})
+    .add({
+      targets: '.ml5 .letter',
+      translateY: ["1.1em", 0],
+      translateZ: 0,
+      duration: 750,
+      delay: (el, i) => 50 * i
+    }).add({
+      targets: '.ml5',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 1000
+    });
+
+    var textWrapper = document.querySelector('.ml4 .letters');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    anime.timeline({loop: true})
+    .add({
+      targets: '.ml4 .letter',
+      translateY: ["1.1em", 0],
+      translateZ: 0,
+      duration: 750,
+      delay: (el, i) => 50 * i
+    }).add({
+      targets: '.ml4',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 1000
+    });
+
+    var textWrapper = document.querySelector('.ml3 .letters');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    anime.timeline({loop: true})
+    .add({
+      targets: '.ml3 .letter',
+      translateY: ["1.1em", 0],
+      translateZ: 0,
+      duration: 750,
+      delay: (el, i) => 50 * i
+    }).add({
+      targets: '.ml3',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 1000
+    });
+  </script>
+
+</body>
+</html>

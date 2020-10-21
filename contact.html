@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to my portfolio</title>
+  <link rel="stylesheet" type="text/css" href="css/content.css">
+  <script src="script/anime.min.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+</head>
+
+<body>
+  <div class="mainheading">
+
+    <header>
+      <h1 id="Sanskriti"><a href="index.html">My Portfolio</a></h1>
+    </header>
+
+    <nav>      
+      <a href="about.html" style=" font-size: 20px;">About</a>
+      <a href="project.html" style=" font-size: 20px;">Projects</a>
+      <a href="certificates.html" style=" font-size: 20px;">Certificates</a>
+      <a href="#" style=" font-size: 20px;"><u>Contact</u></a>   
+    </nav>
+
+  </div>
+
+  <section class="body">
+
+    <div class="mainbody">
+
+      <article id="contact">
+
+        <h1 class="ml13">
+          <span class="text-wrapper">
+            <span class="letters">Letz talk!</span>
+          </span>
+        </h1> 
+       
+        <div class="cntct">
+
+          <form action="#">
+            <p class="content">
+            Enter your name:<br></p>
+            <input type="text" placeholder="Name" class="name"><br><br>
+            <p class="content">
+            Enter your phone number:<br></p>
+            <input type="tel" placeholder="Phone number" class="phno"><br><br>
+            <p class="content">
+            Enter your E-mail: <br></p>
+            <input type="email" placeholder="E-mail" class="mail"><br><br>
+            <p class="content">
+            Drop your message here:<br></p>
+            <textarea rows="5" cols="80"></textarea><br><br>
+            <input type="submit" value="submit" class="submit">
+          </form>      
+          
+          <img src="images\contact.png" class="cntfrm">
+        </div>  <br>
+
+      </article>
+
+    </div>
+
+  </section>
+
+  <footer>&copy; Copyright Sanskriti 2020</footer>
+
+  <script>
+
+    var textWrapper = document.querySelector('.ml13 .letters');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+  
+    anime.timeline({loop: true})
+    .add({
+      targets: '.ml13 .letter',
+      rotateY: [-90, 0],
+      duration: 1300,
+      delay: (el, i) => 45 * i
+    }).add({
+      targets: '.ml13',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 1000
+    });
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to my portfolio!</title>
+  <link rel="stylesheet" type="text/css" href="css/content.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  <script src="script/anime.min.js"></script>
+</head>
+
+<body>
+  <div class="mainheading">
+
+    <header>
+      <h1 id="Sanskriti"><a href="index.html">My Portfolio</a></h1>            
+    </header>
+
+    <nav>      
+      <a href="#" style=" font-size: 20px;"><u>About</u></a>
+      <a href="project.html" style=" font-size: 20px;">Projects</a>
+      <a href="certificates.html" style=" font-size: 20px;">Certificates</a>
+      <a href="contact.html" style=" font-size: 20px;">Contact</a>
+    </nav>
+
+  </div>
+
+  <section class="body">
+
+    <div class="mainbody">
+
+      <article id="about">
+
+        <h1 class="ml10">
+          <span class="text-wrapper">
+            <span class="letters">Glad that you found my IP-ADDRESS!</span>
+          </span>
+        </h1>
+
+        <p class="content abtcontent">
+          Hey there! Myself Sanskriti from Bangalore.<br>
+          Pursuing 3rd year Bachelor of Engineering in Computer Science.<br><br>
+          I am obsessed with making things. <br>And even more obsessed with making things better.<br>
+          
+          I am actively involved in web designing communities.<br><br>
+          Am passionate about developing and designing websites!!<br>
+          I've learnt and mastered languages such as HTML, CSS, Bootsrap,javascript,Jquery and so on...<br>
+          When I design, I always try to be unique and reach the boundaries!<br><br>
+          
+          I'm passionate, expressive, multi-talented spirit with a natural ability to inspire.<br>
+          My speciality is front-end web design and development<br><br>
+          Well, am good at programming too... <br>
+          My domains of expertise include C, C++, Java, JavaScript and Python !<br><br>
+          So now that you know a bit about me. <br>
+          Check out my 
+          <a href="project.html">Projects</a>
+          and if you are really interested, head over to the 
+          <a href="contact.html">Contact</a> area and drop me a message!
+        </p>    
+
+        <img src="images\sans.png" class="comp">
+        
+      </article>
+
+    </div>
+
+  </section>
+
+  <footer>&copy; Copyright Sanskriti 2020</footer>
+
+  <script>
+    var textWrapper = document.querySelector('.ml10 .letters');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    anime.timeline({loop: true})
+    .add({
+      targets: '.ml10 .letter',
+      rotateY: [-90, 0],
+      duration: 1300,
+      delay: (el, i) => 45 * i
+    }).add({
+      targets: '.ml10',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 1000
+    }); 
+
+  </script> 
+  
+</body>
+</html>
